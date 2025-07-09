@@ -1,11 +1,264 @@
-@import 'tailwindcss';
+/* resources/css/app.css */
+@import 'globals.css';
 
-@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
-@source '../../storage/framework/views/*.php';
-@source '../**/*.blade.php';
-@source '../**/*.js';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
+/* Общие стили для всех элементов */
+.screen, .element {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.screen {
+    background-color: #ffffff;
+}
+
+/* Стили для overlap-элементов */
+.overlap-wrapper, .overlap, .overlap-2, .overlap-3, .overlap-4, .overlap-5 {
+    position: relative;
+}
+
+.overlap-wrapper {
+    background-color: #ffffff;
+    overflow: hidden;
+    width: 1440px;
+    height: 1080px;
+}
+
+/* Основные структурные элементы */
+.view, .overlap-group, .rectangle, .rectangle-2, .rectangle-3, .rectangle-4 {
+    position: absolute;
+}
+
+/* Текстовые стили */
+.text-wrapper, .text-wrapper-2, .text-wrapper-3,
+.text-wrapper-4, .text-wrapper-5, .text-wrapper-6,
+.text-wrapper-7, .text-wrapper-8, .text-wrapper-9,
+.text-wrapper-10, .text-wrapper-11, .text-wrapper-12,
+.text-wrapper-13, .text-wrapper-14, .text-wrapper-15,
+.text-wrapper-16, .text-wrapper-17, .text-wrapper-18 {
+    font-family: "Roboto-Regular", Helvetica;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 11px;
+    white-space: nowrap;
+    position: absolute;
+}
+
+/* Специфичные цветовые стили */
+.element {
+    background-color: #374050;
+}
+
+.element .div {
+    background-color: #374050;
+    border: 1px solid #000000;
+    position: relative;
+}
+
+/* Стили для иконок и векторных элементов */
+.close-round, .expand-down, .vector, .vector-2,
+.vector-3, .vector-4, .vector-5, .vector-stroke {
+    position: absolute;
+}
+
+/* Группы элементов */
+.group, .group-2, .group-3, .div-wrapper {
+    position: absolute;
+}
+
+/* Уникальные стили для конкретных элементов */
+.screen .enterprise-resource {
+    color: #ffffff;
+    font-size: 11px;
+}
+
+.screen .view-3 {
+    background-color: #ed1c24;
+}
+
+.element .overlap-group-2 {
+    background-color: #0ec5ff;
+    border-radius: 5px;
+}
+
+/* Стили линий */
+.line, .line-2, .img {
+    position: absolute;
+    object-fit: cover;
+}
+
+/* Специфичные позиции */
+.screen .rectangle {
+    background-color: #f2f6fa;
+    width: 1440px;
+    height: 1015px;
+    top: 64px;
+    left: 0;
+}
+
+.element .rectangle, .element .rectangle-2 {
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
+.element {
+    background-color: #374050;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.element .div {
+    background-color: #374050;
+    border: 1px solid;
+    border-color: #000000;
+    width: 630px;
+    height: 387px;
+    position: relative;
+}
+
+.element .text-wrapper {
+    position: absolute;
+    top: 26px;
+    left: 12px;
+    font-family: "Roboto-Bold", Helvetica;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: 11px;
+    white-space: nowrap;
+}
+
+.element .close-round {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 18px;
+    left: 595px;
+}
+
+.element .text-wrapper-2 {
+    top: 67px;
+    left: 12px;
+    color: #ffffffb2;
+    position: absolute;
+    font-family: "Roboto-Regular", Helvetica;
+    font-weight: 400;
+    font-size: 11px;
+    letter-spacing: 0;
+    line-height: 11px;
+    white-space: nowrap;
+}
+
+.element .text-wrapper-3 {
+    position: absolute;
+    top: 67px;
+    left: 91px;
+    font-family: "Roboto-Regular", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 11px;
+    letter-spacing: 0;
+    line-height: 11px;
+    white-space: nowrap;
+}
+
+.element .text-wrapper-4 {
+    top: 96px;
+    left: 12px;
+    color: #ffffffb2;
+    position: absolute;
+    font-family: "Roboto-Regular", Helvetica;
+    font-weight: 400;
+    font-size: 11px;
+    letter-spacing: 0;
+    line-height: 11px;
+    white-space: nowrap;
+}
+
+.element .text-wrapper-5 {
+    position: absolute;
+    top: 96px;
+    left: 91px;
+    font-family: "Roboto-Regular", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 11px;
+    letter-spacing: 0;
+    line-height: 11px;
+    white-space: nowrap;
+}
+
+.element .text-wrapper-6 {
+    top: 125px;
+    left: 12px;
+    color: #ffffffb2;
+    position: absolute;
+    font-family: "Roboto-Regular", Helvetica;
+    font-weight: 400;
+    font-size: 11px;
+    letter-spacing: 0;
+    line-height: 11px;
+    white-space: nowrap;
+}
+
+.element .text-wrapper-7 {
+    top: 125px;
+    left: 91px;
+    color: #ffffff;
+    position: absolute;
+    font-family: "Roboto-Regular", Helvetica;
+    font-weight: 400;
+    font-size: 11px;
+    letter-spacing: 0;
+    line-height: 11px;
+    white-space: nowrap;
+}
+
+.element .text-wrapper-8 {
+    top: 154px;
+    left: 12px;
+    color: #ffffffb2;
+    position: absolute;
+    font-family: "Roboto-Regular", Helvetica;
+    font-weight: 400;
+    font-size: 11px;
+    letter-spacing: 0;
+    line-height: 11px;
+    white-space: nowrap;
+}
+
+.element .l {
+    position: absolute;
+    top: 154px;
+    left: 91px;
+    font-family: "Roboto-Regular", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 11px;
+    letter-spacing: 0;
+    line-height: 13px;
+}
+
+.element .group {
+    left: 567px;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 23px;
+}
+
+.element .img {
+    left: 545px;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 23px;
 }
