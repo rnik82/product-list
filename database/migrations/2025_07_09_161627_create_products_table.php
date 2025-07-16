@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('article')->unique();
             $table->string('name');
-            $table->string('status')->default('available');
+            $table->string('status')->default('Доступен');
             $table->json('data')->nullable(); // Для атрибутов (цвет, размер)
             $table->timestamps();
         });
